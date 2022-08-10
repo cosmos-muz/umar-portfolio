@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface DivProps {
-  fontSize: string;
+  fontSize: number;
 }
 
 interface PatagraphProps {
@@ -9,7 +9,7 @@ interface PatagraphProps {
 }
 
 const P = styled.p`
-  font-size: (${(props: DivProps) => props.fontSize || '12px'});
+  font-size: (${(props: DivProps) => `${props.fontSize}px` || '12px'});
   line-height: 24px;
 `;
 

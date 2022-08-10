@@ -14,13 +14,15 @@ breadth of experience has enhanced my ability to multitask and manage projects i
 of the SDLC. I’m an active learner who loves to share his knowledge and learn from others. `,
 ];
 function MainPage(props: Props) {
-  // return;
   return (
     <div style={{ margin: '32px' }}>
       <InformationContainer details={details} heading="Why am I here?" imageUrl={DisplayImage} />
-      <InformationContainer details={details} heading="Okay, ?" />
-      <InformationContainer details={details} heading="Who is Umar" />
-      <InformationContainer details={details} heading="What is his Professional Background" />
+      <InformationContainer details={details} heading="Who is Umar?" />
+      <InformationContainer details={details} heading="Where his journey begins?" />
+      <InformationContainer details={details} heading="What has he achieved in the past?" />
+      <InformationContainer details={details} heading="How has he got here?" />
+      <InformationContainer details={details} heading="Where is he at now?" />
+      <InformationContainer details={details} heading="Any Credits?" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { CircularContainer } from '../atoms/CircularContainer';
+import { CircularContainer } from './CircularContainer';
 import { LineBreak } from '../atoms/LineBreak';
 import { Paragraph } from '../atoms/Paragraph';
 import { Title } from '../atoms/Title';
@@ -18,8 +18,8 @@ export function InformationContainer(props: Props) {
       {details.map((detail) => {
         return (
           <>
-            <Paragraph fontSize="16px" text={detail} />
-            <LineBreak width="2px" />
+            <Paragraph fontSize={16} text={detail} />
+            <LineBreak width={2} />
           </>
         );
       })}

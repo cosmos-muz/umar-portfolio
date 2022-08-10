@@ -13,8 +13,7 @@ const Div = styled.div`
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  float: left;
-  height: 120vh;
+  justify-content: space-evenly;
 `;
 
 const Img = styled.img`
