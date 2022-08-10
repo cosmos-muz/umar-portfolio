@@ -1,23 +1,28 @@
 import { CircularContainer } from '../atoms/CircularContainer';
+import { LineBreak } from '../atoms/LineBreak';
 import { Paragraph } from '../atoms/Paragraph';
 import { Title } from '../atoms/Title';
 
 interface Props {
-  imageUrl: string;
-  title: string;
+  imageUrl?: string;
   details: string[];
+  heading: string;
 }
 
 export function InformationContainer(props: Props) {
-  const { details, imageUrl } = props;
-  const first = details.shift() || '';
+  const { imageUrl, heading, details } = props;
   return (
-    <div>
-      {imageUrl && <CircularContainer imageUrl={imageUrl} imageAlt="display picture missing" />}
-
-      <Title fontSize="32px" text={props.title} />
-      <Paragraph fontSize="16px" text={first} />
-      {details && details.map((detail: string) => <Paragraph fontSize="16px" text={detail} />)}
-    </div>
+    <>
+      {imageUrl && <CircularContainer imageUrl={imageUrl} imageAlt="No pic present :(" />}
+      <Title type="H1" text={heading} />
+      {details.map((detail) => {
+        return (
+          <>
+            <Paragraph fontSize="16px" text={detail} />
+            <LineBreak width="2px" />
+          </>
+        );
+      })}
+    </>
   );
 }

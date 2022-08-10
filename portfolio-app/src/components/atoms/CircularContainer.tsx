@@ -14,7 +14,7 @@ const Div = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   float: left;
-  margin: 8px;
+  height: 120vh;
 `;
 
 const Img = styled.img`
@@ -22,6 +22,7 @@ const Img = styled.img`
   height: 150px;
   border-radius: 85px;
   background-image: url(${(props: ImageProps) => props.imageUrl || ''});
+  margin: 0 12px;
 `;
 
 type Props = ImageProps & DivProps;

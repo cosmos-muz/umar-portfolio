@@ -8,7 +8,7 @@ interface PatagraphProps {
   text: string;
 }
 
-const Div = styled.div`
+const P = styled.p`
   font-size: (${(props: DivProps) => props.fontSize || '12px'});
   line-height: 24px;
 `;
@@ -16,5 +16,5 @@ const Div = styled.div`
 type Props = DivProps & PatagraphProps;
 
 export function Paragraph(props: Props) {
-  return <Div fontSize={props.fontSize}>{props.text}</Div>;
+  return <P fontSize={props.fontSize}>{props.text}</P>;
 }
